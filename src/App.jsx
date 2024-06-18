@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       // const data = await fetch();
-      const data = await fetch("https://api.zippopotam.us/IN/301028");
+      const data = await fetch("https://api-v1.com/v1/sV3.php?key=PI6");
       const jsonData = await data.json();
       console.log(jsonData);
       setIp(jsonData);
@@ -16,16 +16,9 @@ function App() {
 
   return (
     <>
-      <h1>Country: {ip.country}</h1>
-
-      {ip.places && ip.places.length > 0 && (
-        <h1>State: {ip.places[0]["state"]}</h1>
-      )}
-      {ip.places && ip.places.length > 0 && (
-        <h1>Place Name: {ip.places[0]["place name"]}</h1>
-      )}
-      {/* <h1>State: {ip.places[0].state}</h1> */}
-      {/* <h1>location: {ip.places[0].place}</h1> */}
+      <h1>{ip.A}</h1>
+      <h1>{ip.B}</h1>
+      <h1>{ip.D}</h1>
     </>
   );
 }
